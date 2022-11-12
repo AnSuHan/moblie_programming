@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        style="@style/txt_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/person"
+            android:background="@drawable/round_box_gray"
+            android:layout_marginRight="-3dp"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/selected_box"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/key"
+            android:background="@drawable/round_box_gray"
+            android:layout_marginRight="-3dp"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="····"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@drawable/selected_box"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+
+</LinearLayout>
