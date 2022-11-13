@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondPortfolio"
+    android:id="@+id/secondPortfolioFrag">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="20">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="19">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#FF9900"
+                        android:layout_weight="1.5"/>
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:text="내용을 입력해주세요"
+                        android:background="@drawable/round_box"
+                        android:layout_weight="3"
+                        android:layout_margin="15dp"
+                        style="@style/normal_txt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#FF0000"
+                        android:layout_weight="1.5"/>
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="120dp"
+                        android:text="내용을 입력해주세요"
+                        android:background="@drawable/round_box"
+                        android:layout_weight="3"
+                        android:layout_margin="15dp"
+                        style="@style/normal_txt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#00FF00"
+                        android:layout_weight="1.5"/>
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:text="내용을 입력해주세요"
+                        android:background="@drawable/round_box"
+                        android:layout_weight="3"
+                        android:layout_margin="15dp"
+                        style="@style/normal_txt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#0000FF"
+                        android:layout_weight="1.5"/>
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:text="내용을 입력해주세요"
+                        android:background="@drawable/round_box"
+                        android:layout_weight="3"
+                        android:layout_margin="15dp"
+                        style="@style/normal_txt"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#FF00FF"
+                        android:layout_weight="1.5"/>
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:text="내용을 입력해주세요"
+                        android:background="@drawable/round_box"
+                        android:layout_weight="3"
+                        android:layout_margin="15dp"
+                        style="@style/normal_txt"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</FrameLayout>
