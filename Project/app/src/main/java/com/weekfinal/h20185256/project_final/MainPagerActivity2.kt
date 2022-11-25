@@ -39,8 +39,8 @@ class MainPagerActivity2 : AppCompatActivity() {
                 if(isTab5Clicked) {
                     isTab5Clicked = false
 
-                    //val intent = Intent(this, NthPortfolioActivity::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(this, NthPortfolioActivity::class.java)
+                    startActivity(intent)
                 }
 
                 transaction.commit()
