@@ -70,7 +70,16 @@
         android:layout_gravity="end"
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/menu_navigation"
-        android:id="@+id/main_drawer_view"/>
+        android:id="@+id/main_drawer_view">
+
+        <Button
+            android:id="@+id/navigation_btn_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="Contact"/>
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

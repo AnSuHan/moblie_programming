@@ -9,6 +9,7 @@ import android.provider.SettingsSlicesContract
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +17,7 @@ import com.weekfinal.h20185256.project_final.databinding.ActivityNthPortfolioBin
 
 class NthPortfolioActivity : AppCompatActivity() {
     lateinit var binding : ActivityNthPortfolioBinding
+    lateinit var toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +25,19 @@ class NthPortfolioActivity : AppCompatActivity() {
 
         binding = ActivityNthPortfolioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //toolbar
         setSupportActionBar(binding.toolbar)
+
+        //toggle 버튼 적용
+        toggle = ActionBarDrawerToggle(this, binding.drawer2, R.string.drawer_opened, R.string.drawer_closed)
+        binding.drawer2.addDrawerListener(toggle)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)   // 왼쪽 버튼 사용 여부 true
+        toggle.syncState()
+
+        //어댑터??
+
+
 
         val tmpTitle = mutableListOf<String>()
 
@@ -35,8 +49,8 @@ class NthPortfolioActivity : AppCompatActivity() {
 
                 val layoutManager = LinearLayoutManager(this as Context) //부모의 context 찾기
                 binding.nthPortfolioActivityRecyclerView.layoutManager = layoutManager
-                val adapter = MyAdapter(tmpTitle)
-                binding.nthPortfolioActivityRecyclerView.adapter = adapter
+                //val adapter = MyAdapter(tmpTitle)
+                binding.nthPortfolioActivityRecyclerView.adapter = MyAdapter(tmpTitle)
                 binding.nthPortfolioActivityRecyclerView.addItemDecoration(
                     DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
                 )
@@ -44,6 +58,11 @@ class NthPortfolioActivity : AppCompatActivity() {
                 binding.nthEditText.text = null
             }
         }
+
+        binding.navigationBtnContact.setOnClickListener {
+            Log.d("kkang", "contact clicked")
+        }
+
 
     }
 
@@ -82,7 +101,8 @@ class NthPortfolioActivity : AppCompatActivity() {
             if(p1 == DialogInterface.BUTTON_POSITIVE) {
                 Log.d("kkang", "positive button")
                 //change to another activity
-                val intent = Intent(this, EditProfileImageActivity::class.java)
+
+                val intent = Intent(applicationContext, EditProfileImageActivity::class.java)
                 startActivity(intent)
             }
             else if(p1 == DialogInterface.BUTTON_NEGATIVE) {

@@ -1,10 +1,12 @@
 package com.weekfinal.h20185256.project_final
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.SearchView
 import com.google.android.material.tabs.TabLayout
@@ -39,7 +41,7 @@ class MainPagerActivity2 : AppCompatActivity() {
                 if(isTab5Clicked) {
                     isTab5Clicked = false
 
-                    val intent = Intent(this, NthPortfolioActivity::class.java)
+                    val intent = Intent(applicationContext, NthPortfolioActivity::class.java)
                     startActivity(intent)
                 }
 
@@ -71,10 +73,12 @@ class MainPagerActivity2 : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
 
+        /*
+        //11 material (p.90)
         //MenuItem 객체를 얻고 그 안에 포함된 ActionView 객체 획득
-        val menuItem = menu?.findItem(R.id.menu_person)
+        val menuItem : MenuItem? = menu?.findItem(R.id.menu_person)
         //menu.add()
-        val searchView = menuItem?.actionView as SearchView
+        val searchView : SearchView = menuItem?.actionView as SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String?): Boolean {
                 //검색어 변경
@@ -87,6 +91,8 @@ class MainPagerActivity2 : AppCompatActivity() {
                 return true
             }
         })
+
+         */
 
         return true
     }
