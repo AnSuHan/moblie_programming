@@ -9,8 +9,12 @@ import android.provider.SettingsSlicesContract
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.weekfinal.h20185256.project_final.databinding.ActivityNthPortfolioBinding
@@ -31,17 +35,20 @@ class NthPortfolioActivity : AppCompatActivity() {
 
         //toggle 버튼 적용
         toggle = ActionBarDrawerToggle(this, binding.drawer2, R.string.drawer_opened, R.string.drawer_closed)
-        binding.drawer2.addDrawerListener(toggle)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)   // 왼쪽 버튼 사용 여부 true
         toggle.syncState()
 
-        //어댑터??
+        //binding.drawer2.addDrawerListener(toggle)
+
+        var drawerLayout = findViewById<DrawerLayout>(R.id.drawer2)
 
 
 
         val tmpTitle = mutableListOf<String>()
 
         binding.nthBtnAdd.setOnClickListener {
+            //Log.d("kkang", "${binding.nthEditText.text}")
+
             if(binding.nthEditText.text != null) {
                 Log.d("kkang", "${binding.nthEditText.text}")
                 tmpTitle.add(binding.nthEditText.text.toString())
@@ -56,13 +63,31 @@ class NthPortfolioActivity : AppCompatActivity() {
                 )
 
                 binding.nthEditText.text = null
+            } else {
+                Log.d("kkang", "text is null")
             }
         }
 
         binding.navigationBtnContact.setOnClickListener {
-            Log.d("kkang", "contact clicked")
+            //Log.d("kkang", "contact clicked")
+
+            val intent = Intent(this, ContactActivity::class.java)
+            startActivity(intent)
         }
 
+        /*
+        binding.mainDrawerView?.findViewById<Button>(R.id.navigation_returnIntro)?.setOnClickListener {
+            Toast.makeText(this, "click btn_returnIntro", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.mainDrawerView?.findViewById<Button>(R.id.navigation_collapse)?.setOnClickListener {
+            Toast.makeText(this, "click btn_collapse", Toast.LENGTH_SHORT).show()
+        }
+         */
 
     }
 
@@ -73,7 +98,7 @@ class NthPortfolioActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when(item.title){
         "person" -> {
-            Log.d("kkang", "person")
+            //Log.d("kkang", "person")
 
             AlertDialog.Builder(this).run {
                 setTitle("Confirm")
@@ -88,6 +113,7 @@ class NthPortfolioActivity : AppCompatActivity() {
         "fold" -> {
             Log.d("kkang", "fold")
             true
+            //super.onOptionsItemSelected(item)
         }
 
         else -> {
@@ -95,6 +121,8 @@ class NthPortfolioActivity : AppCompatActivity() {
             super.onOptionsItemSelected(item)
         }
     }
+
+
 
     val eventHandler = object : DialogInterface.OnClickListener {
         override fun onClick(p0: DialogInterface?, p1: Int) {

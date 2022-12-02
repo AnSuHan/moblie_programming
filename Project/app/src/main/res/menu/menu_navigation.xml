@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:icon="@android:drawable/ic_menu_share"
-        android:title="Portfolio1"/>
+        android:title="Portfolio1"
+        android:id="@+id/navigation_portfolio_first"/>
     <item
         android:icon="@android:drawable/ic_menu_help"
-        android:title="Portfolio2"/>
+        android:title="Portfolio2"
+        android:id="@+id/navigation_portfolio_second"/>
     <item
         android:icon="@android:drawable/ic_menu_search"
-        android:title="Portfolio3"/>
+        android:title="Portfolio3"
+        android:id="@+id/navigation_portfolio_third"/>
     <item
         android:icon="@android:drawable/ic_menu_add"
-        android:title="Portfolio4"/>
+        android:title="Portfolio4"
+        android:id="@+id/navigation_portfolio_fourth"/>
 </menu>

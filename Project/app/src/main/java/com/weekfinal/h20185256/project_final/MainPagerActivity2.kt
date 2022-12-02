@@ -49,11 +49,11 @@ class MainPagerActivity2 : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                Log.d("kkang", "onTabUnselected..")
+                //Log.d("kkang", "onTabUnselected..")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                Log.d("kkang", "onTabReselected..")
+                //Log.d("kkang", "onTabReselected..")
             }
 
         })
