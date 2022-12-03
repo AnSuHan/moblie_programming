@@ -15,7 +15,6 @@ class MainPagerFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    //source : https://juahnpop.tistory.com/215
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,7 +31,16 @@ class MainPagerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.pagerBtnFirst.setOnClickListener {
-            Log.d("kkang", "success fragment binding")
+            Log.d("kkang", "first btn clicked")
+        }
+        binding.pagerBtnSecond.setOnClickListener {
+            Log.d("kkang", "second btn clicked")
+        }
+        binding.pagerBtnThird.setOnClickListener {
+            Log.d("kkang", "third btn clicked")
+        }
+        binding.pagerBtnNth.setOnClickListener {
+            Log.d("kkang", "nth btn clicked")
         }
     }
 }
