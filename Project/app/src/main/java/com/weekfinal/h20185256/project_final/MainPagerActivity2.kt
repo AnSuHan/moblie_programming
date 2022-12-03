@@ -14,7 +14,6 @@ import com.weekfinal.h20185256.project_final.databinding.ActivityMainPager2Bindi
 
 class MainPagerActivity2 : AppCompatActivity() {
     lateinit var toggle : ActionBarDrawerToggle
-    var isTab5Clicked = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +35,7 @@ class MainPagerActivity2 : AppCompatActivity() {
                     "Tab2" -> transaction.replace(R.id.tabContent, FirstPortfolio())
                     "Tab3" -> transaction.replace(R.id.tabContent, SecondPortfolio())
                     "Tab4" -> transaction.replace(R.id.tabContent, ThirdPortfolio())
-                    "Tab5" -> isTab5Clicked = true
-                }
-                if(isTab5Clicked) {
-                    isTab5Clicked = false
-
-                    val intent = Intent(applicationContext, NthPortfolioActivity::class.java)
-                    startActivity(intent)
+                    "Tab5" -> transaction.replace(R.id.tabContent, NthPortfolio())        //isTab5Clicked = true
                 }
 
                 transaction.commit()

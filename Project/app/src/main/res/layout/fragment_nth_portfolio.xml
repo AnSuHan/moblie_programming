@@ -3,21 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:id="@+id/drawer2">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/nth_portfolio_recyclerView"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <!-->
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/toolbar"/>
+        <-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:id="@+id/nth_portfolio_recyclerView"
+            android:layout_marginBottom="100dp"/>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <EditText
                 android:layout_width="match_parent"
@@ -33,7 +47,7 @@
                 android:layout_height="40dp"
                 android:text="+"
                 android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="10dp"
                 android:id="@+id/nth_btn_add"/>
         </FrameLayout>
 
@@ -41,15 +55,15 @@
 
 
 
-        <!-->
-        <androidx.drawerlayout.widget.DrawerLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/drawer">
+    <!-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer">
 
-        </androidx.drawerlayout.widget.DrawerLayout>
-        <-->
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <-->
 
 
     <com.google.android.material.navigation.NavigationView
@@ -58,7 +72,16 @@
         android:layout_gravity="end"
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/menu_navigation"
-        android:id="@+id/main_drawer_view"/>
+        android:id="@+id/main_drawer_view">
+
+        <Button
+            android:id="@+id/navigation_btn_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="Contact"/>
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
