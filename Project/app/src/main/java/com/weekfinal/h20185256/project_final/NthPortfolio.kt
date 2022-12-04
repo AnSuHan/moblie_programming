@@ -66,16 +66,6 @@ class NthPortfolio : Fragment() {
          */
 
         /*
-        binding.navigationBtnContact.setOnClickListener {
-            //Log.d("kkang", "contact clicked")
-
-            val intent = Intent(this, ContactActivity::class.java)
-            startActivity(intent)
-        }
-
-         */
-
-        /*
         binding.mainDrawerView?.findViewById<Button>(R.id.navigation_returnIntro)?.setOnClickListener {
             Toast.makeText(this, "click btn_returnIntro", Toast.LENGTH_SHORT).show()
 
@@ -99,7 +89,6 @@ class NthPortfolio : Fragment() {
         binding = FragmentNthPortfolioBinding.inflate(inflater, container, false)
 
         return binding.root
-        //return inflater.inflate(com.weekfinal.h20185256.project_final.R.layout.fragment_nth_portfolio, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -110,15 +99,6 @@ class NthPortfolio : Fragment() {
 
             tmpTitle.add(binding.nthEditText.text.toString())
 
-            /*
-            val layoutManager = LinearLayoutManager(this as Context) //부모의 context 찾기
-            binding.nthPortfolioActivityRecyclerView.layoutManager = layoutManager
-            //val adapter = MyAdapter(tmpTitle)
-            binding.nthPortfolioActivityRecyclerView.adapter = MyAdapter(tmpTitle)
-            binding.nthPortfolioActivityRecyclerView.addItemDecoration(
-                DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
-            )
-            */
 
             val layoutManager = LinearLayoutManager(requireContext())
             binding.nthPortfolioRecyclerView.layoutManager = layoutManager
@@ -129,6 +109,11 @@ class NthPortfolio : Fragment() {
 
 
             binding.nthEditText.text = null
+        }
+
+        binding.navigationBtnContact.setOnClickListener {
+            val intent = Intent(requireContext(), ContactActivity::class.java)
+            startActivity(intent)
         }
     }
 }

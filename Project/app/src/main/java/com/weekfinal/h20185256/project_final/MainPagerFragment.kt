@@ -30,6 +30,8 @@ class MainPagerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //"Should Be BackUp!!" -> if use intent in listener : can't restore this project
+        //when rewrite in this code
         binding.pagerBtnFirst.setOnClickListener {
             Log.d("kkang", "first btn clicked")
         }

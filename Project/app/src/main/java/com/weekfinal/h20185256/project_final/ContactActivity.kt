@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.weekfinal.h20185256.project_final.databinding.ActivityContactBinding
-import com.weekfinal.h20185256.project_final.databinding.ContactAddLayoutBinding
+import com.weekfinal.h20185256.project_final.databinding.ActivityContactLayoutBinding
 
 class ContactActivity : AppCompatActivity() {
     lateinit var binding : ActivityContactBinding
@@ -43,9 +43,15 @@ class ContactActivity : AppCompatActivity() {
         }
         "plus" -> {
             Log.d("kkang", "plus")
-            val contactAdd = ContactAddLayoutBinding.inflate(layoutInflater)
+            val contactAdd = ActivityContactLayoutBinding.inflate(layoutInflater)
 
             AlertDialog.Builder(this).run {
+                val newBinding = ActivityContactLayoutBinding.inflate(layoutInflater)
+                Thread() {
+                    textCheck()
+                }.run()
+
+
                 setView(contactAdd.root)
                 setPositiveButton("SUBMIT", eventHandler)
                 setNegativeButton("CANCEL", null)
@@ -68,16 +74,49 @@ class ContactActivity : AppCompatActivity() {
             if(p1 == DialogInterface.BUTTON_POSITIVE) {
                 Log.d("kkang", "positive button")
 
+                val newBinding = ActivityContactLayoutBinding.inflate(layoutInflater)
+
+                Log.d("kkang", "${newBinding.toString()}")
+                Log.d("kkang", "${newBinding.contactAddInput.toString()}")
+                Log.d("kkang", "${newBinding.contactAddInput.text.toString()}")
+                Log.d("kkang", "${newBinding.contactAddInput.getText()}")
+
+
+                runOnUiThread {
+                    Log.d("kkang", "activity runOnThread ${newBinding.contactAddInput.text.toString()}")
+                }
+
+                /*
+                Thread() {
+                    Log.d("kkang", "activity thread")
+                    Thread.sleep(1000)
+
+                    runOnUiThread {
+                        Log.d("kkang", "activity thread ${newBinding.contactAddInput.text.toString()}")
+                    }
+                }.run()
+                 */
+
+
+                //contactList.add(newBinding.contactAddInput.text.toString())
+
                 /*
                 inputStr = findViewById<EditText>(R.id.contact_add_input).toString()        //not working
                 Log.d("kkang", "new var data : ${inputStr}")
 
-
-                //add new contact
-                val str : String = ContactAddLayoutBinding.inflate(layoutInflater).contactAddInput.text.toString()     //not working
-                Log.d("kkang", str)
-
                  */
+                /*
+                inputStr = findViewById<EditText>(R.id.contact_add_input).text.toString()
+                Log.d("kkang", "new var data : ${inputStr}")
+
+
+                val str : String = ContactAddLayoutBinding.inflate(layoutInflater).contactAddInput.text.toString()     //not working
+                Log.d("kkang", "${str}")
+
+                var str2 = ActivityContactLayoutBinding.inflate(layoutInflater).contactAddInput.text.toString()         //not working
+                Log.d("kkang", "${str2}")
+                 */
+
 
                 //
                 /*
@@ -99,9 +138,6 @@ class ContactActivity : AppCompatActivity() {
 
 
 
-
-
-
                 //contactList.add(inputStr)
             }
 
@@ -114,5 +150,11 @@ class ContactActivity : AppCompatActivity() {
                 DividerItemDecoration(applicationContext, LinearLayoutManager.VERTICAL)
             )
         }
+    }
+
+    fun textCheck() {
+        val newBinding = ActivityContactLayoutBinding.inflate(layoutInflater)
+        Log.d("kkang", "activity thread")
+        Log.d("kkang", "activity thread ${newBinding.contactAddInput.text.toString()}")
     }
 }
