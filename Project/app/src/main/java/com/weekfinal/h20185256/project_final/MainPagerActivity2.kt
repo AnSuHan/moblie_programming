@@ -11,15 +11,21 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.weekfinal.h20185256.project_final.databinding.ActivityContactLayoutBinding
 import com.weekfinal.h20185256.project_final.databinding.ActivityMainPager2Binding
 
 class MainPagerActivity2 : AppCompatActivity() {
-    lateinit var toggle : ActionBarDrawerToggle
+    //lateinit var toggle : ActionBarDrawerToggle
+    lateinit var navigationView: NavigationView
     var now_fragment : String? = "Tab1"
     val binding : ActivityMainPager2Binding by lazy { ActivityMainPager2Binding.inflate(layoutInflater) }
+    //var drawer_State = onDrawerClosed()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,18 +62,32 @@ class MainPagerActivity2 : AppCompatActivity() {
             }
 
         })
-
         //toolbar
         setSupportActionBar(binding.toolbar)
-        //supportActionBar!!.setDisplayHomeAsUpEnabled(true)  // 왼쪽 버튼 사용 여부 true
 
-
-        //toggle 버튼 적용
-        toggle = ActionBarDrawerToggle(this, binding.drawer, R.string.drawer_opened, R.string.drawer_closed)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.person_30px)
 
+        binding.navigationBtnContact.setOnClickListener {
+            val intent = Intent(this, ContactActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
-        toggle.syncState()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            android.R.id.home -> {
+                AlertDialog.Builder(this).run {
+                    setTitle("Confirm")
+                    setMessage("Do you wish to continue?")
+                    setPositiveButton("SUBMIT", eventHandler)
+                    setNegativeButton("CANCEL", null)
+                    show()
+                }
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -78,19 +98,8 @@ class MainPagerActivity2 : AppCompatActivity() {
 
         binding.toolbar.setOnMenuItemClickListener {
             when(it.itemId) {
-                R.id.menu_person -> {
-                    AlertDialog.Builder(this).run {
-                        setTitle("Confirm")
-                        setMessage("Do you wish to continue?")
-                        setPositiveButton("SUBMIT", eventHandler)
-                        setNegativeButton("CANCEL", null)
-                        show()
-                    }
-
-                    true
-                }
                 R.id.menu_fold -> {
-                    //drawer
+                    binding.drawer.openDrawer(GravityCompat.END)
 
                     true
                 }

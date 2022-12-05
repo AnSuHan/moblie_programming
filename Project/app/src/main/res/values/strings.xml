@@ -9,6 +9,8 @@
     <string name="fragment_data_binding">https://juahnpop.tistory.com/215</string>
     <string name="fragment_context">https://yuuj.tistory.com/30</string>
     <string name="runOnUiThread_data">https://magicalcode.tistory.com/48</string>
+    <string name="drawer_auto_close">https://stackoverflow.com/questions/56550366/how-to-fully-implement-the-navigation-drawer-template-in-kotlin</string>
+    <string name="drawer_open_toolbar_btn">https://minf.tistory.com/34</string>
 
     <string name="source_profile_photo">https://www.flaticon.com/search?word=image</string>
     <string name="source_cross_icon">https://bit.ly/3UYQrkU</string>

@@ -65,20 +65,6 @@ class NthPortfolio : Fragment() {
         }
          */
 
-        /*
-        binding.mainDrawerView?.findViewById<Button>(R.id.navigation_returnIntro)?.setOnClickListener {
-            Toast.makeText(this, "click btn_returnIntro", Toast.LENGTH_SHORT).show()
-
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        binding.mainDrawerView?.findViewById<Button>(R.id.navigation_collapse)?.setOnClickListener {
-            Toast.makeText(this, "click btn_collapse", Toast.LENGTH_SHORT).show()
-        }
-         */
-
     }
 
     override fun onCreateView(
@@ -109,11 +95,6 @@ class NthPortfolio : Fragment() {
 
 
             binding.nthEditText.text = null
-        }
-
-        binding.navigationBtnContact.setOnClickListener {
-            val intent = Intent(requireContext(), ContactActivity::class.java)
-            startActivity(intent)
         }
     }
 }
