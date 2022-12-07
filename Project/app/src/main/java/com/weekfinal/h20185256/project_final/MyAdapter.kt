@@ -9,6 +9,7 @@ import kotlin.system.exitProcess
 
 class MyViewHolder(val binding : ItemRecyclerviewBinding) : RecyclerView.ViewHolder(binding.root)
 
+//NthPortfolio fragment에 사용하는 Adapter
 class MyAdapter (val contents : MutableList<String>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
         MyViewHolder(ItemRecyclerviewBinding.inflate(
@@ -29,21 +30,23 @@ class MyAdapter (val contents : MutableList<String>?) : RecyclerView.Adapter<Rec
     }
 }
 
-class MyAdapter2 (val contents : MutableList<String>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+//ContactActivity에 사용하는 Adapter
+class MyAdapter2 (val contactCategory : MutableList<String>?, val contactDescription : MutableList<String>?, val contactInput : MutableList<String>?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
         MyViewHolder(ItemRecyclerviewBinding.inflate(
             LayoutInflater.from(parent.context), parent, false))
 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if(contents?.get(position) != null) {
+        if(contactCategory?.get(position) != null) {
             val binding = (holder as MyViewHolder).binding
-            binding.itemDataTitle.text = ""
-            binding.itemDataMsg.text = contents!![position]
+            binding.itemDataTitle.text = contactCategory[position]
+            binding.itemDataMsg.text = contactDescription!![position]
+            binding.itemDataInfo.text = contactInput!![position]
         }
     }
 
     override fun getItemCount(): Int {
-        return contents?.size ?: 0
+        return contactCategory?.size ?: 0
     }
 }
