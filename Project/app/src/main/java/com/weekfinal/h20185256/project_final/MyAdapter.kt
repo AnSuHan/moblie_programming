@@ -20,6 +20,7 @@ class MyAdapter (val contents : MutableList<String>?) : RecyclerView.Adapter<Rec
             val binding = (holder as MyViewHolder).binding
             binding.itemDataTitle.text = contents!![position].substring(0 until 5)
             binding.itemDataMsg.text = contents!![position]
+            binding.itemDataInfo.text = contents!![position]
         }
     }
 

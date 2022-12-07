@@ -17,7 +17,6 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
-import com.weekfinal.h20185256.project_final.databinding.ActivityContactLayoutBinding
 import com.weekfinal.h20185256.project_final.databinding.ActivityMainPager2Binding
 
 class MainPagerActivity2 : AppCompatActivity() {
