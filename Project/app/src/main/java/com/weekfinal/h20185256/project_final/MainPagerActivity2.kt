@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.weekfinal.h20185256.project_final.databinding.ActivityMainPager2Binding
@@ -35,7 +36,6 @@ class MainPagerActivity2 : AppCompatActivity() {
         supportFragmentManager.beginTransaction().add(R.id.tabContent, MainPagerFragment()).commit()
 
         val tabLayout = binding.tabs
-
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -131,6 +131,47 @@ class MainPagerActivity2 : AppCompatActivity() {
 
         transaction.commit()
     }
+
+    //https://github.com/robolectric/robolectric/issues/3698
+    //https://start1a.tistory.com/50
+    public fun changeTab(str : String) {
+        Log.d("kkang", "chageTab in MainPagerActivity2 : $str")
+
+        val transaction = supportFragmentManager.beginTransaction()
+
+        Log.d("kkang", "nowfragment : ${now_fragment}")         //Tab1
+
+        if(now_fragment == str) {           //Tab1과 같이 String으로 사용 가능
+            Log.d("kkang", "equal")
+        } else {
+            Log.d("kkang", "not equal")
+        }
+
+
+        when(str) {
+            "Tab1" -> transaction.replace(R.id.tabContent, MainPagerFragment())
+            "Tab2" -> transaction.replace(R.id.tabContent, FirstPortfolio())
+            "Tab3" -> transaction.replace(R.id.tabContent, SecondPortfolio())
+            "Tab4" -> transaction.replace(R.id.tabContent, ThirdPortfolio())
+            "Tab5" -> transaction.replace(R.id.tabContent, NthPortfolio())
+        }
+
+        //https://proandroiddev.com/illegalstateexception-you-used-a-fragment-99816e7cf71b
+        Log.d("kkang", "${supportFragmentManager.isStateSaved}")    //false
+
+        //https://medium.com/hongbeomi-dev/%EB%B2%88%EC%97%AD-%EB%8B%A4%EC%96%91%ED%95%9C-%EC%A2%85%EB%A5%98%EC%9D%98-commit-8f646697559f
+        transaction.commitNow()
+        //transaction.commitAllowingStateLoss()
+        //transaction.commitNowAllowingStateLoss()
+
+        /*
+        //java.lang.IllegalStateException: This transaction is already being added to the back stack
+        transaction.addToBackStack(null)
+        transaction.commitNowAllowingStateLoss()
+         */
+        //https://www.androiddesignpatterns.com/2013/08/fragment-transaction-commit-state-loss.html
+    }
+
 
     val eventHandler = object : DialogInterface.OnClickListener {
         override fun onClick(p0: DialogInterface?, p1: Int) {
