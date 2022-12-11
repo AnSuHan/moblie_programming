@@ -14,16 +14,10 @@
         android:theme="@style/Theme.Project_Final.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".ContactLayout"
-            android:exported="false" />
-        <activity
             android:name=".ContactActivity"
             android:exported="false" />
         <activity
             android:name=".EditProfileImageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NthPortfolioActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -38,11 +32,9 @@
             android:name=".SplashActivity"
             android:exported="true" />
         <activity
-            android:name=".MainPagerActivity"
-            android:exported="true" />
-        <activity
             android:name=".MainPagerActivity2"
-            android:exported="true" />
+            android:exported="true"
+            android:configChanges="orientation|keyboard"/>
     </application>
 
 </manifest>

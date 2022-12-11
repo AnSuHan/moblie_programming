@@ -6,8 +6,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
@@ -15,6 +17,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
@@ -30,7 +33,6 @@ class MainPagerActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //val binding = ActivityMainPager2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction().add(R.id.tabContent, MainPagerFragment()).commit()
@@ -40,7 +42,7 @@ class MainPagerActivity2 : AppCompatActivity() {
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 val transaction = supportFragmentManager.beginTransaction()
-                when(tab?.text) {
+                when (tab?.text) {
                     "Tab1" -> transaction.replace(R.id.tabContent, MainPagerFragment())
                     "Tab2" -> transaction.replace(R.id.tabContent, FirstPortfolio())
                     "Tab3" -> transaction.replace(R.id.tabContent, SecondPortfolio())
@@ -53,14 +55,13 @@ class MainPagerActivity2 : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                //Log.d("kkang", "onTabUnselected..")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                //Log.d("kkang", "onTabReselected..")
             }
 
         })
+
         //toolbar
         setSupportActionBar(binding.toolbar)
 
@@ -71,6 +72,7 @@ class MainPagerActivity2 : AppCompatActivity() {
             val intent = Intent(this, ContactActivity::class.java)
             startActivity(intent)
         }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -107,6 +109,14 @@ class MainPagerActivity2 : AppCompatActivity() {
                 }
             }
         }
+        binding.mainDrawerView.findViewById<Button>(R.id.navigation_collapse).setOnClickListener {
+            binding.drawer.closeDrawer(Gravity.RIGHT)
+        }
+        binding.mainDrawerView.findViewById<Button>(R.id.navigation_returnIntro).setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         return true
     }
@@ -131,6 +141,26 @@ class MainPagerActivity2 : AppCompatActivity() {
 
         transaction.commit()
     }
+
+    //https://stackoverflow.com/questions/59516016/how-to-change-between-fragments-with-buttons-inside-the-fragments-in-kotlin
+    fun changeFragment(str : String){
+        lateinit var fragment : Fragment
+
+        when(str) {
+            "Tab1" -> fragment = MainPagerFragment()
+            "Tab2" -> fragment = FirstPortfolio()
+            "Tab3" -> fragment = SecondPortfolio()
+            "Tab4" -> fragment = ThirdPortfolio()
+            "Tab5" -> fragment = NthPortfolio()
+        }
+
+
+        getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.tabContent, fragment)
+            .commit()
+    }
+
 
     //https://github.com/robolectric/robolectric/issues/3698
     //https://start1a.tistory.com/50
@@ -172,6 +202,13 @@ class MainPagerActivity2 : AppCompatActivity() {
         //https://www.androiddesignpatterns.com/2013/08/fragment-transaction-commit-state-loss.html
     }
 
+    /*
+    public fun changedFragmentStates(str : String) {
+        clickChangeButton = true
+        new_fragment = str
+        onCreate(saved_Bundle)
+    }
+     */
 
     val eventHandler = object : DialogInterface.OnClickListener {
         override fun onClick(p0: DialogInterface?, p1: Int) {

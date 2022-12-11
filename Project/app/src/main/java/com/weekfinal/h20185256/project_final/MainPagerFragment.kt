@@ -24,22 +24,23 @@ class MainPagerFragment : Fragment() {
         binding = FragmentMainPagerBinding.inflate(inflater, container, false)
 
         return binding.root
-
-        //return inflater.inflate(R.layout.fragment_main_pager, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val newBinding = ActivityMainPager2Binding.inflate(layoutInflater)
-        val obj = MainPagerActivity2()
         //"Should Be BackUp!!" -> if use intent in listener : can't restore this project
         //when rewrite in this code
 //        binding.pagerBtnFirst.setOnClickListener {
 //            Log.d("kkang", "first btn clicked")
 //        }
+        binding.pagerBtnFirst.setOnClickListener {
+            Log.d("kkang", "change frag btn")
+            //MainPagerActivity2().changeTab("Tab2")
+        }
         binding.pagerBtnSecond.setOnClickListener {
             Log.d("kkang", "second btn clicked")
+            //MainPagerActivity2().changedFragmentStates("Tab2")
         }
         binding.pagerBtnThird.setOnClickListener {
             Log.d("kkang", "third btn clicked")
@@ -47,9 +48,6 @@ class MainPagerFragment : Fragment() {
         binding.pagerBtnNth.setOnClickListener {
             Log.d("kkang", "nth btn clicked")
         }
-        binding.pagerFirst?.setOnClickListener {
-            Log.d("kkang", "change frag btn")
-            MainPagerActivity2().changeTab("Tab2")
-        }
+
     }
 }
