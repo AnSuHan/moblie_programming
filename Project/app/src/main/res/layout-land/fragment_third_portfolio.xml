@@ -19,43 +19,42 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/round_box"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/twitter_icon"/>
+                <LinearLayout
+                    android:layout_width="470dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/round_box"
-                    android:layout_margin="10dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/twitter_icon"/>
-                    <LinearLayout
-                        android:layout_width="500dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sample Title"
-                            android:layout_marginTop="15dp"
-                            style="@style/normal_txt"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Write your message here"
-                            android:layout_marginTop="15dp"
-                            style="@style/normal_txt_blur"/>
-                    </LinearLayout>
+                    android:orientation="vertical">
 
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/sample_txt_1"
                         android:layout_marginTop="15dp"
-                        android:layout_weight="1"
+                        style="@style/normal_txt"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sample_txt_2"
+                        android:layout_marginTop="15dp"
+                        style="@style/normal_txt_blur"/>
+                </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -69,31 +68,31 @@
                         android:layout_height="100dp"
                         android:src="@drawable/twitter_icon"/>
                     <LinearLayout
-                        android:layout_width="500dp"
+                        android:layout_width="470dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_1"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_3"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
-
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -107,31 +106,31 @@
                         android:layout_height="100dp"
                         android:src="@drawable/twitter_icon"/>
                     <LinearLayout
-                        android:layout_width="500dp"
+                        android:layout_width="470dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_3"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_4"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
-
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -145,31 +144,31 @@
                         android:layout_height="100dp"
                         android:src="@drawable/twitter_icon"/>
                     <LinearLayout
-                        android:layout_width="500dp"
+                        android:layout_width="470dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_3"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
-
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -183,31 +182,31 @@
                         android:layout_height="100dp"
                         android:src="@drawable/twitter_icon"/>
                     <LinearLayout
-                        android:layout_width="500dp"
+                        android:layout_width="470dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_4"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
-
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -221,31 +220,31 @@
                         android:layout_height="100dp"
                         android:src="@drawable/twitter_icon"/>
                     <LinearLayout
-                        android:layout_width="500dp"
+                        android:layout_width="470dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_6"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
-
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -259,32 +258,33 @@
                         android:layout_height="100dp"
                         android:src="@drawable/twitter_icon"/>
                     <LinearLayout
-                        android:layout_width="500dp"
+                        android:layout_width="470dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
-                            android:layout_marginTop="15dp"
+                            android:text="@string/sample_txt_7"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
-
                     <TextView
-                        style="@style/normal_txt_blur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
                         android:text="10:56AM"
-                        android:textSize="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        style="@style/normal_txt_blur"
+                        android:textSize="15dp"/>
                 </LinearLayout>
+
+
 
             </LinearLayout>
 

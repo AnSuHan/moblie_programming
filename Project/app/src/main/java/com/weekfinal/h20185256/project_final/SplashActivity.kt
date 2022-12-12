@@ -12,18 +12,18 @@ class SplashActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val progress = findViewById<ProgressBar>(R.id.splash_progress)
-        Thread {
-            while(true) {
-                progress.setProgress(progress.progress + 100/3)
-                Thread.sleep(1000)
-            }
-        }.start()
-
         Handler().postDelayed({
             val intent = Intent(this, MainPagerActivity2::class.java)
             startActivity(intent)
             finish()
         }, 3000)
+
+        val progress = findViewById<ProgressBar>(R.id.splash_progress)
+        Thread {
+            while(true) {
+                progress.setProgress(progress.progress + 101/3)
+                Thread.sleep(990)
+            }
+        }.start()
     }
 }

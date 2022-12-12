@@ -1,6 +1,8 @@
 package com.weekfinal.h20185256.project_final
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.weekfinal.h20185256.project_final.databinding.FragmentNthPortfolioBinding
@@ -19,9 +21,10 @@ class MyAdapter (val contents : MutableList<String>?) : RecyclerView.Adapter<Rec
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if(contents?.get(position) != null) {
             val binding = (holder as MyViewHolder).binding
-            binding.itemDataTitle.text = contents!![position].substring(0 until 5)
+            binding.itemDataTitle.text = contents!![position].substring(0 until 10)
             binding.itemDataMsg.text = contents!![position]
-            binding.itemDataInfo.text = contents!![position]
+            binding.itemDataInfo.visibility = View.GONE
+            binding.itemImg.visibility = View.GONE
         }
     }
 

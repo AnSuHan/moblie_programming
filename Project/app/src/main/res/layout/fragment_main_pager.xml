@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Text - Double click to edit"
+                android:text="First Portfolio"
                 style="@style/normal_txt"/>
         </LinearLayout>
         <LinearLayout
@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Text - Double click to edit"
+                android:text="Second Portfolio"
                 style="@style/normal_txt"/>
         </LinearLayout>
         <LinearLayout
@@ -83,7 +83,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Text - Double click to edit"
+                android:text="Third Portfolio"
                 style="@style/normal_txt"/>
         </LinearLayout>
 
@@ -118,7 +118,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Text - Double click to edit"
+                android:text="Nth Portfolio"
                 style="@style/normal_txt"/>
         </LinearLayout>
     </LinearLayout>

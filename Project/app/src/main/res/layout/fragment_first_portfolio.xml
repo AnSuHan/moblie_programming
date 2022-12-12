@@ -6,102 +6,87 @@
     tools:context=".FirstPortfolio"
     android:id="@+id/firstPortfolioFrag">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:text="@string/sample_txt_1"
+                android:textSize="30dp"
+                android:background="@drawable/round_box"
+                android:layout_margin="15dp"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:backgroundTint="#DDDDDD"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:text="@string/sample_txt_2"
+                android:textSize="30dp"
+                android:background="@drawable/round_box"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:backgroundTint="#00AA00"/>
 
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text="Message"
-                        android:textSize="30dp"
-                        android:background="@drawable/round_box"
-                        android:layout_margin="15dp"
-                        android:padding="20dp"
-                        android:textAlignment="center"
-                        android:backgroundTint="#DDDDDD"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:text="@string/sample_txt_3"
+                android:textSize="30dp"
+                android:background="@drawable/round_box"
+                android:layout_margin="15dp"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:backgroundTint="#DDDDDD"/>
 
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text="Message"
-                        android:textSize="30dp"
-                        android:background="@drawable/round_box"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginBottom="15dp"
-                        android:padding="20dp"
-                        android:textAlignment="center"
-                        android:backgroundTint="#00AA00"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:text="@string/sample_txt_4"
+                android:textSize="30dp"
+                android:background="@drawable/round_box"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:backgroundTint="#00AA00"/>
 
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text="Message"
-                        android:textSize="30dp"
-                        android:background="@drawable/round_box"
-                        android:layout_margin="15dp"
-                        android:padding="20dp"
-                        android:textAlignment="center"
-                        android:backgroundTint="#DDDDDD"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:text="@string/sample_txt_5"
+                android:textSize="30dp"
+                android:background="@drawable/round_box"
+                android:layout_margin="15dp"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:backgroundTint="#DDDDDD"/>
 
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text="Message"
-                        android:textSize="30dp"
-                        android:background="@drawable/round_box"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginBottom="15dp"
-                        android:padding="20dp"
-                        android:textAlignment="center"
-                        android:backgroundTint="#00AA00"/>
-
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text="Message"
-                        android:textSize="30dp"
-                        android:background="@drawable/round_box"
-                        android:layout_margin="15dp"
-                        android:padding="20dp"
-                        android:textAlignment="center"
-                        android:backgroundTint="#DDDDDD"/>
-
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text="Message"
-                        android:textSize="30dp"
-                        android:background="@drawable/round_box"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginBottom="15dp"
-                        android:padding="20dp"
-                        android:textAlignment="center"
-                        android:backgroundTint="#00AA00"/>
-
-                </LinearLayout>
-
-            </ScrollView>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:text="@string/sample_txt_6"
+                android:textSize="30dp"
+                android:background="@drawable/round_box"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:backgroundTint="#00AA00"/>
 
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </FrameLayout>

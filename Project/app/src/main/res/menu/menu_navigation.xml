@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:icon="@android:drawable/ic_menu_share"
+        android:icon="@android:drawable/ic_menu_search"
         android:title="Portfolio1"
         android:id="@+id/navigation_portfolio_one"/>
     <item
-        android:icon="@android:drawable/ic_menu_help"
+        android:icon="@android:drawable/ic_menu_search"
         android:title="Portfolio2"
         android:id="@+id/navigation_portfolio_two"/>
     <item
@@ -13,7 +13,7 @@
         android:title="Portfolio3"
         android:id="@+id/navigation_portfolio_three"/>
     <item
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@android:drawable/ic_menu_search"
         android:title="Portfolio4"
         android:id="@+id/navigation_portfolio_four"/>
 </menu>

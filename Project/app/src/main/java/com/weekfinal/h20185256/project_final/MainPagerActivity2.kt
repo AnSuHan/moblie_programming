@@ -1,6 +1,5 @@
 package com.weekfinal.h20185256.project_final
 
-import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,25 +9,18 @@ import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.weekfinal.h20185256.project_final.databinding.ActivityMainPager2Binding
 
 class MainPagerActivity2 : AppCompatActivity() {
-    //lateinit var toggle : ActionBarDrawerToggle
     lateinit var navigationView: NavigationView
     var now_fragment : String? = "Tab1"
     val binding : ActivityMainPager2Binding by lazy { ActivityMainPager2Binding.inflate(layoutInflater) }
-    //var drawer_State = onDrawerClosed()
+    private var menuImg= R.drawable.person_30px
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,15 +56,21 @@ class MainPagerActivity2 : AppCompatActivity() {
 
         //toolbar
         setSupportActionBar(binding.toolbar)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.person_30px)
+
 
         binding.navigationBtnContact.setOnClickListener {
             val intent = Intent(this, ContactActivity::class.java)
             startActivity(intent)
         }
 
+    }
+
+    override fun onResume() {
+        Log.d("kkang", "in onResume $menuImg")      //Integer
+        supportActionBar?.setHomeAsUpIndicator(menuImg)
+
+        super.onResume()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -93,7 +91,6 @@ class MainPagerActivity2 : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
-        //inflater.inflate(R.menu.main_menu, menu)
 
         binding.toolbar.inflateMenu(R.menu.main_menu)
 
@@ -109,6 +106,7 @@ class MainPagerActivity2 : AppCompatActivity() {
                 }
             }
         }
+        //drawer's button listener
         binding.mainDrawerView.findViewById<Button>(R.id.navigation_collapse).setOnClickListener {
             binding.drawer.closeDrawer(Gravity.RIGHT)
         }
@@ -126,7 +124,7 @@ class MainPagerActivity2 : AppCompatActivity() {
         outState.putString("nowFragment", now_fragment)
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {   //not working
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {   //can't change fragment like mainPagerFragment's button
         super.onRestoreInstanceState(savedInstanceState)
         now_fragment = savedInstanceState.getString("nowfragment")
 
@@ -138,8 +136,11 @@ class MainPagerActivity2 : AppCompatActivity() {
             "Tab4" -> transaction.replace(R.id.tabContent, ThirdPortfolio())
             "Tab5" -> transaction.replace(R.id.tabContent, NthPortfolio())
         }
-
         transaction.commit()
+    }
+
+    fun changeImg(imgsrc : Int) {
+        menuImg = imgsrc
     }
 
     //https://stackoverflow.com/questions/59516016/how-to-change-between-fragments-with-buttons-inside-the-fragments-in-kotlin

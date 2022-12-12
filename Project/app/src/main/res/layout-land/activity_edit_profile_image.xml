@@ -21,7 +21,35 @@
             android:weightSum="4">
 
             <ImageView
-                android:id="@+id/edit_profile_imageView"
+                android:id="@+id/edit_profile_btn_person"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/person"
+                android:clickable="true"
+                android:layout_weight="3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Image"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#888888"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/edit_profile_btn_photo"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:src="@drawable/profile_photo"
@@ -31,34 +59,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="뛰노는"
-                android:textSize="15dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:background="#888888"
-                android:textColor="@color/white"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_columnWeight="1"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:orientation="vertical"
-            android:weightSum="4">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:src="@drawable/cross_icon_removebg"
-                android:clickable="true"
-                android:layout_weight="3"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:text="뛰노는"
+                android:text="Image"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -85,43 +86,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="뛰노는"
+            android:text="Image"
             android:textSize="15dp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_weight="1"
             android:background="#888888"
             android:textColor="@color/white"/>
-
-    </LinearLayout>
-        <LinearLayout
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:orientation="vertical"
-        android:weightSum="4">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/cross_icon_removebg"
-            android:clickable="true"
-            android:layout_weight="3"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="뛰노는"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="#888888"
-            android:textColor="@color/white"/>
-
-    </LinearLayout>
-
+        </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_columnWeight="1"
@@ -140,14 +112,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="뛰노는"
+                android:text="Image"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:layout_weight="1"
                 android:background="#888888"
                 android:textColor="@color/white"/>
-
         </LinearLayout><LinearLayout
         android:layout_width="0dp"
         android:layout_columnWeight="1"
@@ -166,14 +137,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="뛰노는"
+            android:text="Image"
             android:textSize="15dp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_weight="1"
             android:background="#888888"
             android:textColor="@color/white"/>
-
     </LinearLayout><LinearLayout
         android:layout_width="0dp"
         android:layout_columnWeight="1"
@@ -192,40 +162,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="뛰노는"
+            android:text="Image"
             android:textSize="15dp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_weight="1"
             android:background="#888888"
             android:textColor="@color/white"/>
-
-    </LinearLayout><LinearLayout
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:orientation="vertical"
-        android:weightSum="4">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/cross_icon_removebg"
-            android:clickable="true"
-            android:layout_weight="3"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="뛰노는"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="#888888"
-            android:textColor="@color/white"/>
-
     </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -245,14 +188,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="뛰노는"
+                android:text="Image"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:layout_weight="1"
                 android:background="#888888"
                 android:textColor="@color/white"/>
-
         </LinearLayout><LinearLayout
         android:layout_width="0dp"
         android:layout_columnWeight="1"
@@ -271,14 +213,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="뛰노는"
+            android:text="Image"
             android:textSize="15dp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_weight="1"
             android:background="#888888"
             android:textColor="@color/white"/>
-
     </LinearLayout><LinearLayout
         android:layout_width="0dp"
         android:layout_columnWeight="1"
@@ -297,41 +238,167 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="뛰노는"
+            android:text="Image"
             android:textSize="15dp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_weight="1"
             android:background="#888888"
             android:textColor="@color/white"/>
-
-    </LinearLayout><LinearLayout
-        android:layout_width="0dp"
-        android:layout_columnWeight="1"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:orientation="vertical"
-        android:weightSum="4">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/cross_icon_removebg"
-            android:clickable="true"
-            android:layout_weight="3"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="뛰노는"
-            android:textSize="15dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="#888888"
-            android:textColor="@color/white"/>
-
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/cross_icon_removebg"
+                android:clickable="true"
+                android:layout_weight="3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Image"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#888888"
+                android:textColor="@color/white"/>
+        </LinearLayout><LinearLayout
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/cross_icon_removebg"
+            android:clickable="true"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Image"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#888888"
+            android:textColor="@color/white"/>
+    </LinearLayout><LinearLayout
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/cross_icon_removebg"
+            android:clickable="true"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Image"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#888888"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/cross_icon_removebg"
+                android:clickable="true"
+                android:layout_weight="3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Image"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#888888"
+                android:textColor="@color/white"/>
+        </LinearLayout><LinearLayout
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/cross_icon_removebg"
+            android:clickable="true"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Image"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#888888"
+            android:textColor="@color/white"/>
+    </LinearLayout><LinearLayout
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/cross_icon_removebg"
+            android:clickable="true"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Image"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="#888888"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
     </GridLayout>
 
 

@@ -42,7 +42,7 @@
                         <EditText
                             android:layout_width="300dp"
                             android:layout_height="150dp"
-                            android:text="내용을 입력해주세요"
+                            android:text="@string/sample_txt_1"
                             android:background="@drawable/round_box"
                             android:layout_weight="3"
                             android:layout_margin="15dp"/>
@@ -62,7 +62,7 @@
                         <EditText
                             android:layout_width="300dp"
                             android:layout_height="120dp"
-                            android:text="내용을 입력해주세요"
+                            android:text="@string/sample_txt_2"
                             android:background="@drawable/round_box"
                             android:layout_weight="3"
                             android:layout_margin="15dp"/>
@@ -82,7 +82,7 @@
                         <EditText
                             android:layout_width="300dp"
                             android:layout_height="100dp"
-                            android:text="내용을 입력해주세요"
+                            android:text="@string/sample_txt_3"
                             android:background="@drawable/round_box"
                             android:layout_weight="3"
                             android:layout_margin="15dp"/>
@@ -102,7 +102,7 @@
                         <EditText
                             android:layout_width="300dp"
                             android:layout_height="200dp"
-                            android:text="내용을 입력해주세요"
+                            android:text="@string/sample_txt_4"
                             android:background="@drawable/round_box"
                             android:layout_weight="3"
                             android:layout_margin="15dp"/>
@@ -122,7 +122,7 @@
                         <EditText
                             android:layout_width="300dp"
                             android:layout_height="200dp"
-                            android:text="내용을 입력해주세요"
+                            android:text="@string/sample_txt_5"
                             android:background="@drawable/round_box"
                             android:layout_weight="3"
                             android:layout_margin="15dp"/>

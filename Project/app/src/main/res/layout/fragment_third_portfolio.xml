@@ -38,13 +38,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_1"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_2"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
@@ -53,6 +53,7 @@
                         android:layout_height="wrap_content"
                         android:text="10:56AM"
                         android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
@@ -75,13 +76,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_1"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_3"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
@@ -90,6 +91,7 @@
                         android:layout_height="wrap_content"
                         android:text="10:56AM"
                         android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
@@ -112,13 +114,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_3"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_4"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
@@ -127,6 +129,7 @@
                         android:layout_height="wrap_content"
                         android:text="10:56AM"
                         android:layout_marginTop="15dp"
+                        android:layout_marginLeft="115dp"
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
@@ -149,13 +152,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_3"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
@@ -164,6 +167,7 @@
                         android:layout_height="wrap_content"
                         android:text="10:56AM"
                         android:layout_marginTop="15dp"
+                        android:layout_marginLeft="120dp"
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
@@ -186,13 +190,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_4"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
@@ -201,6 +205,7 @@
                         android:layout_height="wrap_content"
                         android:text="10:56AM"
                         android:layout_marginTop="15dp"
+                        android:layout_marginLeft="120dp"
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
@@ -223,13 +228,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
+                            android:text="@string/sample_txt_6"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
@@ -238,6 +243,7 @@
                         android:layout_height="wrap_content"
                         android:text="10:56AM"
                         android:layout_marginTop="15dp"
+                        android:layout_marginLeft="130dp"
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
@@ -260,14 +266,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Sample Title"
+                            android:text="@string/sample_txt_5"
                             android:layout_marginTop="15dp"
                             style="@style/normal_txt"/>
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:text="Write your message here"
-                            android:layout_marginTop="15dp"
+                            android:text="@string/sample_txt_7"
                             style="@style/normal_txt_blur"/>
                     </LinearLayout>
                     <TextView
@@ -278,6 +283,7 @@
                         style="@style/normal_txt_blur"
                         android:textSize="15dp"/>
                 </LinearLayout>
+
 
 
 

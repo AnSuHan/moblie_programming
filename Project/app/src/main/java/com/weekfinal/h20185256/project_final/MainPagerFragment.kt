@@ -20,7 +20,6 @@ class MainPagerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentMainPagerBinding.inflate(inflater, container, false)
 
         return binding.root
@@ -31,9 +30,7 @@ class MainPagerFragment : Fragment() {
 
         //"Should Be BackUp!!" -> if use intent in listener : can't restore this project
         //when rewrite in this code
-//        binding.pagerBtnFirst.setOnClickListener {
-//            Log.d("kkang", "first btn clicked")
-//        }
+
         binding.pagerBtnFirst.setOnClickListener {
             Log.d("kkang", "change frag btn")
             //MainPagerActivity2().changeTab("Tab2")

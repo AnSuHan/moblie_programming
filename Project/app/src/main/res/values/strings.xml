@@ -6,6 +6,16 @@
     <string name="drawer_closed">Closed Drawer</string>
     <string name="user_name">User Name</string>
 
+    <string name="sample_txt_1">모바일 프로그래밍</string>
+    <string name="sample_txt_2">스마트 포트폴리오</string>
+    <string name="sample_txt_3">콘텐츠IT</string>
+    <string name="sample_txt_4">20185256</string>
+    <string name="sample_txt_5">안수한</string>
+    <string name="sample_txt_6">프로젝트</string>
+    <string name="sample_txt_7">https://github.com/AnSuHan/moblie_programming</string>
+
+
+
     <string name="fragment_data_binding">https://juahnpop.tistory.com/215</string>
     <string name="fragment_context">https://yuuj.tistory.com/30</string>
     <string name="runOnUiThread_data">https://magicalcode.tistory.com/48</string>
