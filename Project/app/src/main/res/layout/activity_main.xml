@@ -54,7 +54,8 @@
             android:textAlignment="center"
             android:gravity="center"
             android:background="@drawable/selected_box"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:inputType="textPassword"/>
     </LinearLayout>
 
     <Button
